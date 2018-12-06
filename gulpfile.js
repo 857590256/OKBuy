@@ -11,7 +11,9 @@ var babel = require("gulp-babel");
 var cleanCss = require("gulp-clean-css");
 // sass 编译插件;
 var sass = require("gulp-sass-china");
-const proxy=require("http-proxy-middleware");
+
+var proxy=require("http-proxy-middleware");
+
 gulp.task("html",()=>{
     return gulp.src("*.html")
     .pipe(gulp.dest("dist/"))
@@ -32,14 +34,15 @@ gulp.task("styles", ()=>{
     .pipe(gulp.dest("dist/stylesheets"));
 })
 gulp.task("css",()=>{
-    return gulp.src(["stylesheets/*.css"])
+    return gulp.src(["styles/*.css"])
     .pipe(cleanCss())
-    .pipe(gulp.dest("dist/stylesheets"))
+    .pipe(gulp.dest("dist/css"))
 })
 gulp.task("sass",()=>{
     return gulp.src(["sass/*.scss"])
     .pipe(sass().on("error",sass.logError))
-    .pipe(gulp.dest("dist/stylesheets"))
+    .pipe(gulp.dest("dist/css"))
+    .pipe(gulp.dest("styles"))
 })
 gulp.task("watch",()=>{
     gulp.watch("*.html",["html"])
@@ -49,17 +52,28 @@ gulp.task("watch",()=>{
 
 })
 
-gulp.task('connect',function() {
+gulp.task('connect', function() {
     connect.server({
-        port:8000,
+        
         root:"dist/",
         livereload:true,
-        middleware:function(connect , opt){
-            var Proxy = require('gulp-connect-proxy');
-            opt.route='/proxy';
-            var proxy=new Proxy(opt);
-            return [proxy]
+        // 中间件;
+        // middleware:function(connect , opt){
+        //     var Proxy = require('gulp-connect-proxy');
+        //     opt.route = '/proxy';
+        //     var proxy = new Proxy(opt);
+        //     return [proxy];
+        // }
+        middleware:function(){
+            return [
+                proxy("/api",{
+                    target:"http://localhost:8000",
+                    pathRewrite: {
+                        '^/api' : '/',     // rewrite path
+                    }
+                })
+            ]
         }
     })
-})
+});
 gulp.task("default",["watch","connect","html","script","images","sass"]);
