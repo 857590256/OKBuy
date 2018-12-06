@@ -10,8 +10,8 @@ header{
     position: relative;
 }
 .infor{
-    background: red;
-    width: 620px;
+    
+    width: 608px;
     height: 28px;
     position: absolute;
     top: 0;
@@ -48,6 +48,9 @@ header{
     padding: 0 10px;
     // position: relative;
 }
+.navfor:hover a{
+    color: #d70057;
+}
 .navfor .ico{
     background: url(http://0.js.al.okbuycdn.com/resources/images/v6/common/section-tigger.png) -30px -37px no-repeat;
     width: 11px;
@@ -70,5 +73,194 @@ header{
     width: 80px;
     height: 27px;
     line-height: 27px;
+}
+.navbtm p:hover{
+    cursor: pointer;
+    color: #d70057;
+}
+.imguse .img{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.imguse p{
+    height: 27px;
+    text-align: center;
+}
+.service .navbtm{
+    width: 100%;
+}
+.notice .navbtm{
+    width: 231px;
+    height: 125px;
+    // width: 100%;
+    position: absolute;
+    left: -165px;
+}
+.notice .navbtm p{
+    width: 100%;
+}
+//搜索栏 + logo  start
+//logo
+.con-middle{
+    position: relative;
+    height: 110px;
+    background-color: #f5f5f5;
+    padding: 0 242px;
+}
+.con-middle .cons{
+    width: 100%;
+    height: 110px;
+    position: relative;
+}
+.con-middle .logo{
+    position: absolute;
+    top:0;
+}
+//搜索栏
+.search{
+    width: 480px;
+    height: 35px;
+    position: absolute;
+    left: 334px;
+    top: 24px;
+    height: 31px;
+    padding: 4px 0 0 4px;
+}
+.search input{
+    float: left;
+    width: 378px;
+    padding: 0 0 0 10px;
+    line-height: 32px;
+    height: 38px;
+    border: 3px solid #d70057;
+    outline: none;
+}
+.search .goto{
+    background: url(http://0.js.al.okbuycdn.com/resources/images/v6/common/common-thumb.png) -31px -4px no-repeat;
+    width: 98px;
+    height: 38px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+//热门搜索
+.hotWords{
+    position: absolute;
+    left: 338px;
+    top: 72px;
+    height: 16px;
+    line-height: 16px;
+    width: 420px;
+    overflow: hidden;
+}
+.hotWords a{
+    font-size: 12px;
+    color: #5a5a5a;
+}
+//购物车
+.cart{
+    background: #ffda73 url(http://0.js.al.okbuycdn.com/resources/images/v6/common/common-thumb.png) -238px -4px no-repeat;
+    width: 248px;
+    height: 32px;
+    color: #444;
+    position: absolute;
+    line-height: 39px;
+    transition: width .3s ease-in-out;
+    right: 10px;
+    top: 30px;
+
+}
+.cart span{
+    height: 28px;
+    width: 175px;
+    background: #fff;
+    display: block;
+    line-height: 28px;
+    text-align: center;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    color: #444;
+    font-size: 12px;
+}
+.cart span b{
+    padding: 0 5px;
+    color: #d70057;
+    font-weight: normal;
+}
+//搜索栏 + logo  end
+//nav-down
+.nav-down{
+    height: 40px;
+    width: 100%;
+    background: #000;
+}
+.nav-down li{
+    height: 40px;
+    float: left;
+}
+.navwrap .title{
+    width: 100px;
+    text-align: center;
+    display: block;
+    float: left;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    background: #d70057;
+    font-size: 14px;
+}
+.navwrap .time{
+    background: url(http://0.js.al.okbuycdn.com/resources/images/v6/common/common-thumb.png) -187px -46px no-repeat;
+    width: 122px;
+    height: 46px;
+    display: block;
+    float: left;
+    margin-top: -6px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+}
+.navwrap .bash a{
+    width: 100px;
+    text-align: center;
+    display: block;
+    float: left;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+}
+.navwrap .global img{
+    width: 38px;
+    height: 38px;
+    display: inline-block;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+.navwrap .global a{
+    width: 130px;
+    text-align: center;    
+    display: block;
+    float: left;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+}
+.navwrap .global a span{
+    display: inline-block;
+    
+    float: left;
+}
+.navwrap .last a{
+    text-align: center;
+    display: block;
+    float: left;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
 }
 //header end
