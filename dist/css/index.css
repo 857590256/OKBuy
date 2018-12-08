@@ -13,7 +13,7 @@ header {
   height: 28px;
   position: absolute;
   top: 0;
-  left: 640px;
+  left: 900px;
   line-height: 28px; }
 
 .infor a {
@@ -54,6 +54,9 @@ header {
   height: 7px;
   display: inline-block;
   margin-left: 4px; }
+
+.dropdown-menu {
+  z-index: 900; }
 
 .navbtm {
   padding: 0 10px;
@@ -210,8 +213,43 @@ header {
   line-height: 40px;
   font-size: 14px; }
 
-.navwrap .bash a {
+.navwrap .life .t1 {
   width: 100px;
+  text-align: center;
+  display: block;
+  float: left;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px; }
+
+.navwrap .life-list {
+  width: 100%;
+  font-size: 12px; }
+
+.cloth .t1 {
+  width: 100px;
+  text-align: center;
+  display: block;
+  float: left;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px; }
+
+.shoes .t1 {
+  width: 100px;
+  text-align: center;
+  display: block;
+  float: left;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px; }
+
+.global .t1 {
+  width: 100px;
+  z-index: 10;
   text-align: center;
   display: block;
   float: left;
@@ -228,7 +266,7 @@ header {
   margin: 0;
   padding: 0; }
 
-.navwrap .global a {
+.navwrap .global .t1 {
   width: 130px;
   text-align: center;
   display: block;
@@ -266,6 +304,10 @@ header {
   height: 396px;
   background-color: #fff;
   box-shadow: 2px 2px 4px #acacac; }
+
+.life-list a {
+  color: #5a5a5a;
+  font-size: 12px; }
 
 .bash a:hover .nnav {
   display: block; }
@@ -358,6 +400,9 @@ header {
   background-color: #fff;
   box-shadow: 2px 2px 4px #acacac; }
 
+.cloth-list .context {
+  line-height: 14px; }
+
 .cloth-list .colbox {
   float: left;
   margin-top: 10px;
@@ -366,3 +411,71 @@ header {
 
 .cloth-list .colthumb {
   margin-top: 10px; }
+
+.nav2 .colbox {
+  height: 352px; }
+
+.shoes-list {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  top: 40px;
+  left: 240px;
+  z-index: 900;
+  max-width: 1200px;
+  height: 396px;
+  background-color: #fff;
+  box-shadow: 2px 2px 4px #acacac; }
+
+.shoes-list .colbox {
+  margin-top: 10px;
+  float: left;
+  float: left;
+  display: inline;
+  padding: 10px 12px;
+  height: 352px;
+  overflow: hidden;
+  border-right: 1px dashed #aeaeae; }
+
+.shoes-list .colbox .catewrap {
+  padding: 12px 0;
+  overflow: hidden;
+  zoom: 1; }
+
+#goto {
+  color: #d70057; }
+
+.global-list {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  top: 40px;
+  left: 226px;
+  z-index: 900;
+  max-width: 1200px;
+  height: 396px;
+  background-color: #fff;
+  box-shadow: 2px 2px 4px #acacac; }
+
+.global-list .colbox {
+  margin-top: 10px;
+  float: left;
+  float: left;
+  display: inline;
+  padding: 10px 12px;
+  height: 371px;
+  overflow: hidden;
+  border-right: 1px dashed #aeaeae; }
+
+.global-list .nostyle {
+  display: block;
+  width: 360px;
+  margin-bottom: 0; }
+
+.global-list .colbox img {
+  width: 100%;
+  height: 100%; }
+
+.global-list .colthumb img {
+  width: 100%;
+  height: 100%; }
