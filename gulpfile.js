@@ -67,7 +67,7 @@ gulp.task('connect', function() {
         middleware:function(){
             return [
                 proxy("/api",{
-                    target:"http://localhost:8000",
+                    target:"http://localhost:8080",
                     pathRewrite: {
                         '^/api' : '/',     // rewrite path
                     }

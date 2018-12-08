@@ -273,8 +273,8 @@ header{
     transition: color .3s linear;
 }
 
-.nnav{
-    // display: none;
+.life-list{
+    display: none;
     background-color: #fff;
     position: absolute;
     top: 40px;
@@ -284,6 +284,9 @@ header{
     height: 396px;
     background-color: #fff;
     box-shadow: 2px 2px 4px #acacac;
+}
+.bash a:hover .nnav{
+    display: block;
 }
 .nnav .nnavarr{
     position: absolute;
@@ -363,5 +366,28 @@ header{
     font-size: 12px;
     font-weight: bold;
     color: #D20D33;
+}
+.cloth-list{
+   display: none;
+    background-color: #fff;
+    position: absolute;
+    top: 40px;
+    left: 240px;
+    z-index: 900;
+    max-width: 1200px;
+    height: 396px;
+    background-color: #fff;
+    box-shadow: 2px 2px 4px #acacac;
+    // padding: 10px 12px;
+    
+}
+.cloth-list .colbox{
+    float: left;
+    margin-top: 10px;
+    border-right: 1px dashed #aeaeae;
+    padding: 10px 12px;
+}
+.cloth-list .colthumb{
+    margin-top: 10px;;
 }
 //header end
