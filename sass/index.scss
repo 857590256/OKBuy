@@ -514,13 +514,17 @@ header{
    
     width: 100%;
     height: 350px;
-    background: #d70057
+    
 }
-.prom{
-    background: url(http://i.okaybuy.cn/static/9bdb541c5f8e55bc1c60c7ab01f2d48d.jpg);
+.banner a{
+    display: inline-block;
+    height: 100%;
+}
+.swiper-slide img{
+    display: inline-block;
     width: 100%;
     height: 100%;
-    position: relative;
 }
+
 
 //header end
