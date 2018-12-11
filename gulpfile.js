@@ -54,7 +54,7 @@ gulp.task("watch",()=>{
 
 gulp.task('connect', function() {
     connect.server({
-        
+        port:"8080",
         root:"dist/",
         livereload:true,
         // 中间件;
@@ -67,7 +67,7 @@ gulp.task('connect', function() {
         middleware:function(){
             return [
                 proxy("/api",{
-                    target:"http://localhost:8080",
+                    target:"http://localhost:3000",
                     pathRewrite: {
                         '^/api' : '/',     // rewrite path
                     }
