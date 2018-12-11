@@ -142,5 +142,18 @@
         $(".db").css("display","none")
         $(".bd").css("display","block")
     })
+    //焦点
+    $(".username input").on("focus",function(){
+        $(".username").css("border-color","#4791ff")
+    })
+    $(".username input").on("blur",function(){
+        $(".username").css("border-color","#e0e0e0")
+    })
+    $(".pasw input").on("focus",function(){
+        $(".pasw").css("border-color","#4791ff")
+    })
+    $(".pasw input").on("blur",function(){
+        $(".pasw").css("border-color","#e0e0e0")
+    })
 </script>
 </html>
