@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <div class="minheader">
+        <a href="#" class="left">
+            <img src="http://0.js.al.okbuycdn.com/resources/images/v6/login/login_new_logo.png" alt="">
+        </a>
+        <div class="right">
+                <span class="right_span">
+                    <i></i>天天低价
+                </span>
+                <span class="right_span">
+                    <i></i>正品保障
+                </span>
+                <span class="right_span">
+                    <i></i>15天退换货
+                </span>
+                <span class="right_span">
+                    <i></i>评价晒单有礼
+                </span>
+        </div>
+    </div>
+    <div class="con">
+        <a href="#">
+            <img src="http://i.okaybuy.cn/static/c302701c79fbd2e6a84be4143a316922.jpg" alt="">
+        </a>
+        <div class="wrap">
+            <div class="tab">
+                <div class="chose">
+                    <span class="account active">账号登录</span>
+                    <span class="paw">密码登录</span>
+                </div>
+                <div class="bd">
+                    <div class="top">
+                        <img class="code" src="./images/ee.jpg" alt="" style="left: 80px">
+                        <img class="ncode" src="http://0.js.al.okbuycdn.com/resources/images/v6/login/login_new_prompt.jpg" alt="">
+                    </div>
+                    <div class="world">
+                        <p>请使用好乐买APP扫码登录</p>
+                    </div>
+                    <div class="app">
+                        <p>
+                            <i></i>
+                            <span>下载好乐买APP</span> 
+                            <div class="img">
+                                    <s class="nnavarr">◆</s>
+                                    <img src="http://0.js.al.okbuycdn.com/resources/images/v6/login/login_new_ewm.png" alt="">
+                            </div>       
+                        </p>
+                    </div>
+                </div>
+                <div class="db">
+                    <div class="username">
+                        <input type="text" placeholder="已验证手机/邮箱/用户名">
+                    </div>
+                    <div class="ero usernameError">
+
+                    </div>
+                    <div class="pasw">
+                        <input type="password" placeholder="密码">
+                    </div>
+                    <div class="ero paswError">
+
+                    </div>
+                    <div class="btn">
+                        <input type="submit" value="登录">
+                    </div>
+                    <a class="forget" href="#">忘记密码？</a>
+                </div>
+                <div class="foot">
+                    <div class="party">
+                        <a href="#">
+                            <i class="qq"></i>
+                        </a>
+                        <a href="#">
+                            <i class="wx"></i>
+                        </a>
+                        <a href="#">
+                            <i class="zfb"></i>
+                        </a>
+                        <a href="#">
+                            <i class="wb"></i>
+                        </a>
+                        <a href="#">
+                            <i class="kxw"></i>
+                        </a>
+                    </div>
+                    <a class="go" href="register.html">
+                        <i></i>
+                        注册有惊喜
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(".chose span").on("mouseenter",function(){
+        $(".chose").css("cursor","pointer")
+    })
+    $(".chose .paw").css("color","#d70057")
+    $(".chose span").click(function(){
+        var index = $(this).index();
+        $(this).css({'color':"#d70057"});
+        $(this).siblings().css({'color':'#333333'});
+    })
+    // 图片显示隐藏和图片移动
+    $(".top").on("mouseenter",function(){
+        $(".code").css("left","0")
+        $(".code").css("transition","1s")
+        $(".ncode").css("opacity","1")
+        $(".ncode").css("transition","1s")
+    })
+    $(".top").on("mouseleave",function(){
+        $(".code").css("left","80px")
+        $(".code").css("transition","1s")
+        $(".ncode").css("opacity","0")
+        $(".ncode").css("transition","1s")
+    })
+    //app 图片
+    $(".app span").on("mouseenter",function(){
+        $(".app .img").css("display","block")
+    })
+    $(".app span").on("mouseleave",function(){
+        $(".app .img").css("display","none")
+    })
+    //点击切换
+    $(".account").on("click",function(){
+        $(".db").css("display","block")
+        $(".bd").css("display","none")
+    })
+    $(".paw").on("click",function(){
+        $(".db").css("display","none")
+        $(".bd").css("display","block")
+    })
+</script>
+</html>
