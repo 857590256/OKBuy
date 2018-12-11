@@ -20,10 +20,10 @@ gulp.task("html",()=>{
     .pipe(connect.reload());
 })
 gulp.task("script",()=>{
-    return gulp.src(["javascripts/*.js"])
-    .pipe(concat("main.js"))
-    .pipe(uglify())
-    .pipe(gulp.dest("dist/javascripts/"))
+    return gulp.src(["script/*.js"])
+    .pipe(concat("mian.js"))
+    // .pipe(uglify())
+    .pipe(gulp.dest("dist/script"))
 })
 gulp.task("images",()=>{
     return gulp.src(["images/*.*"])
@@ -47,7 +47,7 @@ gulp.task("sass",()=>{
 gulp.task("watch",()=>{
     gulp.watch("*.html",["html"])
     gulp.watch("images/*.*",["html","images"]);
-    gulp.watch("javascripts/*.js",["html","javascripts"])
+    gulp.watch("script/*.js",["html","script"])
     gulp.watch("sass/*.scss",["html","sass"])
 
 })
@@ -76,4 +76,11 @@ gulp.task('connect', function() {
         }
     })
 });
-gulp.task("default",["watch","connect","html","script","images","sass"]);
+gulp.task("es6",()=>{
+    return gulp.src("es6/*.js")
+    .pipe(babel({
+        presets :['@babel/env']
+    }))
+    .pipe(gulp.dest("dist/script"))
+})
+gulp.task("default",["watch","connect","html","script","images","sass","es6"]);
