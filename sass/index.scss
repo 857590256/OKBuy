@@ -1,3 +1,27 @@
+// 广告
+.ad{
+    width: 100%;
+    height: 85px;
+}
+.ad .left{
+    display: inline-block;
+    width: 773px;
+    height: 85px;
+    background: url("http://i.okaybuy.cn/static/73bcb093565b1919879ea3015f543fab.jpg")
+    no-repeat right 0;
+    float: left;
+}
+.ad a img{
+    width: 100%;
+}
+.ad .right{
+    display: inline-block;
+    width: 770px;
+    height: 85px;
+    background: url("http://i.okaybuy.cn/static/3a2fac970493ec9c2ba784332737da95.jpg")
+    no-repeat left 0
+
+}
 //header  start
 header{
     width: 100%;
@@ -169,7 +193,7 @@ header{
     position: absolute;
     line-height: 39px;
     transition: width .3s ease-in-out;
-    right: 10px;
+    right: -100px;
     top: 30px;
 
 }
@@ -820,7 +844,7 @@ footer .abm p a{
     height: 80px;
     text-align: center;
     padding: 45px 0 0 0;
-    
+
 }
 .w1200 .logo a{
     margin-right: 20px;
