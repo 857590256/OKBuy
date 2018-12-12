@@ -1,4 +1,4 @@
-// nav  改变
+// nav 改变
 $(".btn-group").on("mouseenter",showlist)
 $(".btn-group").on("mouseleave",hidelist)           
     function showlist(event){
@@ -13,6 +13,7 @@ $(".btn-group").on("mouseleave",hidelist)
             var target = e.currentTarget;
             $(target).children(".dropdown-menu").stop().fadeOut();
     }
+
 
 // swiper
 var swiper = new Swiper('.swiper-container', {

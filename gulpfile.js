@@ -21,7 +21,7 @@ gulp.task("html",()=>{
 })
 gulp.task("script",()=>{
     return gulp.src(["script/*.js"])
-    .pipe(concat("mian.js"))
+    // .pipe(concat("mian.js"))
     // .pipe(uglify())
     .pipe(gulp.dest("dist/script"))
 })
