@@ -59,13 +59,13 @@
                 </div>
                 <div class="db">
                     <div class="username">
-                        <input type="text" placeholder="已验证手机/邮箱/用户名">
+                        <input type="text" value="18235705018" placeholder="已验证手机/邮箱/用户名">
                     </div>
                     <div class="ero usernameError">
 
                     </div>
                     <div class="pasw">
-                        <input type="password" placeholder="密码">
+                        <input type="password" placeholder="密码" value="123456">
                     </div>
                     <div class="ero paswError">
 
@@ -155,5 +155,36 @@
     $(".pasw input").on("blur",function(){
         $(".pasw").css("border-color","#e0e0e0")
     })
+</script>
+<!-- 登录 -->
+<script>
+$(".btn").on("click",login);
+
+function login(){
+  var username = $(".username input").val();
+  var password = $(".pasw input").val();
+  var options = {
+    url:"http://localhost:8080/api/users/login",
+    type:"POST",
+    data:{
+      username : username,
+      password : password
+    }
+  }
+  
+  $.ajax(options)
+  .then(function(res){
+    // console.log(res);
+    if(res.status == "success"){
+      location.href = "http://localhost:8080/index.html"
+      // console.log(res);
+    }else{
+      alert("发生错误 错误代码:" + res.statuCode);
+    }
+  },function(err){
+    console.log(err,"错误")
+  })
+
+}
 </script>
 </html>

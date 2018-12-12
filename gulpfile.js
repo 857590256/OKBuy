@@ -2,17 +2,17 @@ const gulp = require("gulp");
 // gulp 服务器插件;
 const connect = require("gulp-connect");
 // gulp 合并插件;
-var concat = require('gulp-concat');
+const concat = require('gulp-concat');
 // gulp 压缩插件;
-var uglify = require("gulp-uglify");
+const uglify = require("gulp-uglify");
 // babel 插件;
-var babel = require("gulp-babel");
+const babel = require("gulp-babel");
 // css 插件;
-var cleanCss = require("gulp-clean-css");
+const cleanCss = require("gulp-clean-css");
 // sass 编译插件;
-var sass = require("gulp-sass-china");
+const sass = require("gulp-sass-china");
 
-var proxy=require("http-proxy-middleware");
+const proxy=require("http-proxy-middleware");
 
 gulp.task("html",()=>{
     return gulp.src("*.html")
