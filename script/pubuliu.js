@@ -63,9 +63,9 @@ function renderPage(json){
     // 根据比例计算图片高度;
     json.forEach(function(ele){
           // console.log(ele);
-          html += `   <div class="goods-box">
+          html += `   <li class="goods-box">
                             <div class="good-image">
-                                  <img src="${ele.show.img}" width=${ 262 } height=${ parseInt(262 / ele.show.w * ele.show.h) } alt="">
+                                  <img class="goodsImg" src="${ele.show.img}" width=${ 262 } height=${ parseInt(262 / ele.show.w * ele.show.h) } alt="">
                             </div>
                             <div class="good-title">
                                   <p>${ele.title}</p>
@@ -81,7 +81,7 @@ function renderPage(json){
                                   </div>
                             </div>
                             <button class="btn-car" data-iid="${ele.iid}">加入购物车</button>
-                      </div> `
+                      </li> `
     });
     
     // console.log(html);
@@ -108,7 +108,7 @@ function addCar(nowMsg , iid){
    
     $.extend(nowMsg , {count : 1});
     var sNowMsg = JSON.stringify(nowMsg);
-    // console.log(sNowMsg);
+    console.log(1);
    
 
     if(!localStorage.cart){
@@ -174,8 +174,6 @@ function renderCart(){
                 <img src="${cart_json[i].show.img}"> 
                 <span>${cart_json[i].price}</span> 
                 <span>×${cart_json[i].count}</span>
-                
-                <i class="clear">222</i>
           </li>`
     }
 
@@ -184,7 +182,6 @@ function renderCart(){
 
 $("#clear").on("click",function(){
     localStorage.clear("cart");
+    // console.log(222)
 })
-$(".clear").on("click",function(){
-    localStorage.clear("li");
-})
+

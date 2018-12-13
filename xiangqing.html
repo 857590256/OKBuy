@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>瀑布流</title>
-   
+    <title>详情</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/pubuliu.css">
+    <link rel="stylesheet" href="./css/xiangqing.css">
 </head>
 <body>
-     <!-- 广告 开始 -->
-     <div class="ad">
+    <!-- 广告 开始 -->
+    <div class="ad">
         <a class="left" href="#">
 
         </a>
@@ -712,16 +711,38 @@
             </ul>            
         </div>
     </header>
-    <div class="img">
-       <a href=""><img src="http://i.okaybuy.cn/static/79e09ce459c6c8dfbc8f17d93b300fcd.jpg" border="0" usemap="#Mapb1"></a> 
+
+    <div class="con">
+        <div class="imgbox">
+            <div class="small">
+                <!-- 小框 -->
+                <div class="fram"></div>
+                <!-- 遮罩层 -->
+                <div class="film"></div>
+                <!-- 正常图 -->
+                <img class="simg" src="http://0.image.al.okbuycdn.com/static/662ae5879b4223546e6a82bc14f7a7da.jpg" alt="">
+            </div>
+            <div class="big">
+                <!-- 放大图 -->
+                <img class="bimg" src="http://0.image.al.okbuycdn.com/static/662ae5879b4223546e6a82bc14f7a7da.jpg" alt="">
+            </div>
+        </div>
+        <div class="detail">
+            <div class="h1">
+
+            </div>
+            <div class="rmb">
+
+            </div>
+        </div>
     </div>
-    <ul class="con">
-        
-    </ul>
+    <div id="box"></div>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-<script src="./script/pubuliu.js"></script>
-<script src="./script/common.js"></script>
-<script src="./script/ajax.js"></script>
+<script src="./script/xiangqing.js"></script>
+<script>
+var $box = jQuery("#box")
+console.log($box)
+</script>
 
 </html>
