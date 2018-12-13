@@ -712,7 +712,7 @@
         </div>
     </header>
 
-    <div class="con">
+    <div id="con">
         <div class="imgbox">
             <div class="small">
                 <!-- 小框 -->
@@ -720,29 +720,40 @@
                 <!-- 遮罩层 -->
                 <div class="film"></div>
                 <!-- 正常图 -->
-                <img class="simg" src="http://0.image.al.okbuycdn.com/static/662ae5879b4223546e6a82bc14f7a7da.jpg" alt="">
+                <img class="simg" src="" alt="">
             </div>
             <div class="big">
                 <!-- 放大图 -->
-                <img class="bimg" src="http://0.image.al.okbuycdn.com/static/662ae5879b4223546e6a82bc14f7a7da.jpg" alt="">
+                <img class="bimg" src="" alt="">
             </div>
         </div>
         <div class="detail">
-            <div class="h1">
-
-            </div>
+            <h2></h2>
             <div class="rmb">
-
+                好乐买价<span></span>
+                <s></s>
             </div>
+            <div class="okbuyservice">
+                   
+                </div>
         </div>
     </div>
-    <div id="box"></div>
+    
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="./script/xiangqing.js"></script>
 <script>
-var $box = jQuery("#box")
-console.log($box)
+    // var xq = localStorage.getItem("detail");
+    // console.log(xq)
+var item = JSON.parse(localStorage.detail);
+console.log(item);
+$(".small img").attr({src:item.show.img})
+$(".big img").attr({src:item.show.img})
+// // $(".small img").attr({src:item.show.img})
+$(".detail h2").html(item.title)
+$(".rmb span").html(item.price)
+$(".rmb s").html(item.orgPrice)
+
 </script>
 
 </html>

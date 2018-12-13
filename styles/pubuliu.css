@@ -523,14 +523,11 @@ header {
   float: left;
   margin-bottom: 20px; }
 
-.goods-box .good-image {
+.goods-box img {
+  display: block;
   width: 266px;
   height: 266px;
   margin-bottom: 10px; }
-
-.goods-box .good-image img {
-  width: 100%;
-  height: 100%; }
 
 .good-title {
   padding: 0 5px;

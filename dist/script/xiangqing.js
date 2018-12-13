@@ -29,7 +29,7 @@ $(".global").on("mouseleave",function(){
 $(".btn-group").on("mouseenter",showlist)
 $(".btn-group").on("mouseleave",hidelist)           
     function showlist(event){
-        console.log(1)
+        // console.log(1)
             var e = event || window.event;
             var target = e.currentTarget;
             $(target).css("position","relative")

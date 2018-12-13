@@ -539,7 +539,7 @@ header{
 
 
 //放大镜
-.con{
+#con{
     position: relative;
     width: 1200px;
     height: 1200px;
@@ -552,7 +552,7 @@ header{
     border: 1px solid #aeaeae;
     float: left;
     position: relative;
-    top: 0;
+    top: 20px;
     left: 0;
 }
 .small .fram{
@@ -582,7 +582,7 @@ header{
 }
 .big{
     position: absolute;
-    top: 0;
+    top: 20px;
     left: 420px;
     width: 400px;
     height: 400px;
@@ -597,4 +597,51 @@ header{
     position: absolute;
     left: 0;
     right: 0;
+}
+.detail{
+    width: 700px;
+    height: 600px;
+    background:#ffda73;
+    float: right; 
+}
+.detail h2{
+    margin: 20px 0 30px 0 ;
+    background: tomato;
+    width: 700px;
+    height: 24px;
+    line-height: 24px;
+    display: block;
+    overflow: hidden;
+    padding-left: 20px;
+    font-weight: bold;
+}
+.rmb{
+    width: 700px;
+    height: 190px;
+    background: #acacac;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #535353;
+}
+.rmb span{
+    font-size: 36px;
+    color:#d70057; 
+}
+.rmb s{
+    display: inline-block;
+    width: 35px;
+    height: 18px;
+    line-height: 18px;
+    font-weight: 16px;
+    color: #999;
+    margin-left: 20px;
+}
+.okbuyservice{
+    padding: 10px 0 10px 76px;
+    width: 630px;
+    height: 32px;
+    border-color: #dcdcdc;
+    border-width: 1px 0;
+    border-style: dashed;
+    background: url(http://0.js.al.okbuycdn.com/resources/images/v6/product/detail/okservice.png) 72px 10px no-repeat;
 }
